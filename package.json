@@ -1,0 +1,29 @@
+{
+  "name": "linux-video-state",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "apiVersion": "0.0.0",
+  "scripts": {
+    "test": "node ./tests/main.js",
+    "hw": "git add -A && git commit -m 'oki'&&npm version patch -m patch&&git add -A && git commit --amend -C HEAD&& git push&&npm publish",
+    "patch": "npm version patch -m patch&&git add -A && git commit --amend -C HEAD&& git push&&npm publish",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dottgonzo/linux-video-state.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dottgonzo/netw/issues"
+  },
+  "dependencies": {
+    "memrun": "0.0.15",
+    "promise": "^7.0.4"
+  },
+  "devDependencies": {
+    "verbo": "0.0.7"
+  }
+}
