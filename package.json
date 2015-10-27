@@ -1,6 +1,6 @@
 {
   "name": "linux-video-state",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "apiVersion": "0.0.0",
