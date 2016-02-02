@@ -1,17 +1,9 @@
-var netw=require('../index.js'),
-verb=require("verbo");
+var video = require("../index");
+video().then(function (doc) {
+    console.log(JSON.stringify(doc));
+    process.exit(1);
+}).catch(function (err) {
+    console.log(err);
+});
 
-netw.data().then(function(doc){
-
-if(doc){
-
-
-verb(JSON.stringify(doc),"debug","Data");
-
-
-} else{
-  verb("data problems","error","Aurorajs");
-  process.exit(1);
-
-}
-})
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3RzL21haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsSUFBTyxLQUFLLFdBQVcsVUFBVSxDQUFDLENBQUM7QUFHbkMsS0FBSyxFQUFFLENBQUMsSUFBSSxDQUFDLFVBQVMsR0FBRztJQUt6QixPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQztJQUcvQixPQUFPLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBR2xCLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxVQUFTLEdBQUc7SUFDakIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQztBQUNyQixDQUFDLENBQUMsQ0FBQSIsImZpbGUiOiJ0ZXN0cy9tYWluLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHZpZGVvID0gcmVxdWlyZShcIi4uL2luZGV4XCIpO1xuXG5cbnZpZGVvKCkudGhlbihmdW5jdGlvbihkb2Mpe1xuXG5cblxuXG5jb25zb2xlLmxvZyhKU09OLnN0cmluZ2lmeShkb2MpKTtcblxuXG4gIHByb2Nlc3MuZXhpdCgxKTtcblxuXG59KS5jYXRjaChmdW5jdGlvbihlcnIpe1xuICAgIGNvbnNvbGUubG9nKGVycik7XG59KVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
