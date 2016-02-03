@@ -14,4 +14,4 @@ console.log(JSON.stringify(doc));
 
 }).catch(function(err){
     console.log(err);
-})
+});
