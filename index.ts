@@ -3,8 +3,26 @@ import * as child_process from "child_process";
 
 let exec = child_process.exec;
 
+interface Channel {
+    dev: string;
+    label: string;
+    active: boolean;
+}
+
+interface Answer {
+    dev: string;
+    label: string;
+    active: boolean;
+    channels: Channel[];
+    model_id: string;
+    vendor_id: string;
+    resolution: string;
+    bus: string;
+    serial: string;
+}
+
 export = function() {
-    return new Promise(function(resolve, reject) {
+    return new Promise<Answer[]>(function(resolve, reject) {
         let callbacked = false;
         let timo = setTimeout(function() {
             if (!callbacked) {
@@ -26,7 +44,7 @@ export = function() {
             } else {
                 callbacked = true;
                 clearTimeout(timo);
-                resolve(stdout);
+                resolve(JSON.parse(stdout.toString("utf-8")));
             }
 
         });

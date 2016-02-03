@@ -78,7 +78,7 @@ fi
 done
 
 
-echo "{\"videoInputs\":[$videoins]}"
+echo "[$videoins]"
 
 
 
