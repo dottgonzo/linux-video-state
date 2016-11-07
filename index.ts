@@ -21,7 +21,7 @@ interface Answer {
     serial: string;
 }
 
-export = function() {
+export default function lvs() {
     return new Promise<Answer[]>(function(resolve, reject) {
         let callbacked = false;
         let timo = setTimeout(function() {
