@@ -44,7 +44,7 @@ export default function lvs() {
             } else {
                 callbacked = true;
                 clearTimeout(timo);
-                resolve(JSON.parse(stdout.toString("utf-8")));
+                resolve(JSON.parse(stdout.toString()));
             }
 
         });
