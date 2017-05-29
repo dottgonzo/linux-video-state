@@ -27,7 +27,7 @@ else
 v_active=false
 fi
 
-serial=$(udevadm info -p $(udevadm info -q path -n $device) | grep ID_MODEL=| sed 's/E: ID_MODEL=//g')
+serial=$(udevadm info -p $(udevadm info -q path -n $device) | grep ID_SERIAL=| sed 's/E: ID_SERIAL=//g')
 
 
 v_resolution=$(v4l-info $device | grep fmt.pix.width | awk '{print($3)}')' x '$(v4l-info $device | grep fmt.pix.height | awk '{print($3)}')
